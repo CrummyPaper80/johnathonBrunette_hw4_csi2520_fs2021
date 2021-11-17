@@ -33,7 +33,7 @@ function addComment(ev) {
     reply.innerHTML = 'Reply';
     reply.style.marginLeft = "50%";
 
-    if(createClass(ev.target.parentElement, 'conta')) {
+    if(createClass(ev.target.parentElement, 'container')) {
         const wrapDiv = document.createElement('div');
         wrapDiv.className = 'wrapper';
         commentText = document.getElementById('commentZone').value;
@@ -41,7 +41,7 @@ function addComment(ev) {
         textBox.innerHTML = commentText;
         wrapDiv.append(textBox, reply);
         usComments.appendChild(wrapDiv);
-        textBox.style.background = "#ff895d";
+        textBox.style.background = "rgba(255, 166, 0, 0.925);";
 
     } else {
         wrapDiv = ev.target.parentElement;
@@ -49,7 +49,7 @@ function addComment(ev) {
         textBox.innerHTML = commentText;
         wrapDiv.innerHTML = '';
         wrapDiv.append(textBox, reply);
-        textBox.style.background = "#ff895d";
+        textBox.style.background = "rgba(255, 166, 0, 0.925);";
     }   
 }
 
@@ -67,7 +67,7 @@ document.getElementById('usComments').addEventListener('click', function (e) {
         addButton.innerHTML = 'Post Reply';       
         wrapDiv.append(textArea, addButton);
         parentDiv.appendChild(wrapDiv);     
-        textArea.style.backgroundColor = "#ff895d";        
+        textArea.style.backgroundColor = "rgba(255, 166, 0, 0.925);";        
     } else if(createClass(e.target, 'addReply')) {
         addComment(e);
     } 
